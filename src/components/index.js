@@ -7,22 +7,25 @@
 
 function updateStructure(rec1,rec2){
 	//write your code
-	if(contains(recA,recB)){
+	if(contains(recA,recB)) {
 		const relativeDim=relative(recA,recB);
 		return {...recA,children: [relativeDim] };
-	}elseif (contains(recB,recA)) {
+	}else if (contains(recB,recA)) {
 		const relativeDim=relative(recB,recA);
-	    return {...recB, children: [relativeDim]};
-	}else {
+		return {...recB, children: [relativeDim]};
+	}
+	else {
 		return {...recA};
 	}
 }
-function relative(recA,recB){
+function relative(recA,recB) {
 	const recAn=normalize(recA);
 	const recBn=normalize(recB);
+
 	const res = {
 		children: recB.children
 	}
+
 	if(recB.top) {
 		res.top = `${recBn.x1-recAn.x1}px`;
 	}
