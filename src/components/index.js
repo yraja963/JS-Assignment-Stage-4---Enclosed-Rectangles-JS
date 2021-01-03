@@ -5,7 +5,7 @@
 //	height: '96px'
 //}
 
-function updateStructure(rec1,rec2){
+function updateStructure(recA,recB){
 	//write your code
 	if(contains(recA,recB))
 	{
@@ -77,5 +77,5 @@ function updateStructure(rec1,rec2){
 	return res;
   }
   
-
-module.exports = updateStructure;
+  
+  module.exports = updateStructure;
